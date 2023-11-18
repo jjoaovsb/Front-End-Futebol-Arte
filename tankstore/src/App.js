@@ -40,7 +40,7 @@ function App() {
 
   const handleCheckout = () => {
     setCart([]);
-    history.push("/Tela"); // Redirecionamento para a página "Tela"
+    history.push("/Tela"); 
   };
 
   return (

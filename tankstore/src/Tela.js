@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './Tela.css';
+import testee from "./img/testee.png";
 
 
 function Tela() {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [senha, setPassword] = useState('');
 
   const handleLogin = () => {
     console.log('Email:', email);
-    console.log('Password:', password);
+    console.log('Senha:', senha);
   };
 
   const handleCreateAccount = () => {
@@ -17,19 +18,23 @@ function Tela() {
 
   return (
     <div className="Tela">
+      <header className="tela-header">
+      <h1>22242</h1>
+      <img src={testee} alt="Logo" title="Logo "/>
+      </header>
       <div className="login-container">
         <h2>Login</h2>
         <form>
-          <label>Email:</label>
+          <label>E-mail:</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label>Password:</label>
+          <label>Senha:</label>
           <input
             type="password"
-            value={password}
+            value={senha}
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className="buttons">
@@ -47,5 +52,3 @@ function Tela() {
 }
 
 export default Tela;
-
-
